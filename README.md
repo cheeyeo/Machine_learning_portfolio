@@ -7,7 +7,7 @@ Most of the examples are based on books and other online tutorials.
 
 The notebooks are organized based on frameworks:
 
-## Keras
+## Keras
 
 * [Simple MLP](keras/simple_mlp/simple_mlp.ipynb)
 
