@@ -27,3 +27,18 @@ The notebooks are organized based on frameworks:
 
 * [Simple Logistic Regression from "Tensorflow For Beginners"](tensorflow/Tensorflow%20For%20Beginners%20-%20Logistic%20Regression.ipynb)
 
+## Computer Vision
+
+* [Computer Vision tutorial](computer-vision/CV%20-%20Tutorial.ipynb)
+
+* [Scaling image pixel data tutorial](computer-vision/CV%20-%20Scaling%20Image%Pixel%data.ipynb)
+
+* [Evaluate Pixel scaling](computer-vision/CV%20-%20Scaling%20Pixel%20Methods%20Evaluation.ipynb)
+
+* [Using built-in image functions in Keras](computer-vision/CV%20-%20Load,%20Convert,%20Save%20images%20with%20Keras%20API.ipynb)
+
+* [Using ImageDataGenerator in Keras intro](computer-vision/CV%20-%20ImageDataGenerator%20example.ipynb)
+
+* [Building ResNet50 in Keras](computer-vision/CV%20-%20Residual%20Network%20Keras.ipynb)
+
+* [A multi-outputs example in Keras](computer-vision/CV%20-%20Multi-outputs%20example.ipynb)
