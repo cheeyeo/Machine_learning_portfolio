@@ -1,9 +1,68 @@
 import math
+import os
 import numpy as np
 import h5py
 import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow.python.framework import ops
+from imutils import paths
+import cv2
+from keras.preprocessing.image import img_to_array
+
+def process_img(path, image_dims=(96, 96)):
+    image = cv2.imread(path)
+    image = cv2.resize(image, image_dims)
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    image = img_to_array(image)
+    return image
+
+def create_fashionnet_dataset():
+    category_labels = []
+    colour_labels = []
+    img_data = []
+    image_dims = (96, 96)
+    imagePaths = sorted(list(paths.list_images("datasets/fashionnet")))
+    np.random.shuffle(imagePaths)
+
+    for path in imagePaths:
+        img = process_img(path, image_dims)
+        img_data.append(img)
+
+        colour, cat = path.split(os.path.sep)[-2].split("_")
+        colour_labels.append(np.string_(colour))
+        category_labels.append(np.string_(cat))
+
+    # save to h5py file
+    with h5py.File("datasets/train_fashionnet.h5", "w") as f:
+        f.create_dataset("train_set", data=img_data, compression="gzip")
+        f.create_dataset("colour_labels", data=colour_labels, compression="gzip")
+        f.create_dataset("category_labels", data=category_labels, compression="gzip")
+
+    imagePaths = sorted(list(paths.list_images("datasets/fashionnet_examples")))
+    test_img_data = []
+    test_img_labels = []
+    for path in imagePaths:
+        img = process_img(path, image_dims)
+        test_img_data.append(img)
+        test_img_labels.append(np.string_(path))
+
+    with h5py.File("datasets/test_fashionnet.h5", "w") as f:
+        f.create_dataset("test_set", data=test_img_data)
+        f.create_dataset("test_set_labels", data=test_img_labels)
+
+def load_fashionnet_dataset():
+    with h5py.File("datasets/train_fashionnet.h5", "r") as f:
+        train_dataset = np.array(f["train_set"][:], dtype="float32")
+        colour_labels = np.array(f["colour_labels"][:])
+        category_labels = np.array(f["category_labels"][:])
+
+    return train_dataset, colour_labels, category_labels
+
+def load_fashionnet_test_dataset():
+    with h5py.File("datasets/test_fashionnet.h5", "r") as f:
+        test_dataset = np.array(f["test_set"][:], dtype="float32")
+        test_labels = np.array(f["test_set_labels"][:])
+    return test_dataset, test_labels
 
 def load_dataset():
     train_dataset = h5py.File('datasets/train_signs.h5', "r")
@@ -153,3 +212,6 @@ def predict(X, parameters):
 #        prediction = sess.run(p, feed_dict = {x: X})
 #
 #    return prediction
+
+if __name__ == "__main__":
+    create_fashionnet_dataset()
