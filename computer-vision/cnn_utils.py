@@ -34,9 +34,9 @@ def create_fashionnet_dataset():
 
     # save to h5py file
     with h5py.File("datasets/train_fashionnet.h5", "w") as f:
-        f.create_dataset("train_set", data=img_data, compression="gzip")
-        f.create_dataset("colour_labels", data=colour_labels, compression="gzip")
-        f.create_dataset("category_labels", data=category_labels, compression="gzip")
+        f.create_dataset("train_set", data=img_data, compression="gzip", compression_opts=9)
+        f.create_dataset("colour_labels", data=colour_labels, compression="gzip", compression_opts=9)
+        f.create_dataset("category_labels", data=category_labels, compression="gzip", compression_opts=9)
 
     imagePaths = sorted(list(paths.list_images("datasets/fashionnet_examples")))
     test_img_data = []
@@ -47,8 +47,8 @@ def create_fashionnet_dataset():
         test_img_labels.append(np.string_(path))
 
     with h5py.File("datasets/test_fashionnet.h5", "w") as f:
-        f.create_dataset("test_set", data=test_img_data)
-        f.create_dataset("test_set_labels", data=test_img_labels)
+        f.create_dataset("test_set", data=test_img_data, compression="gzip", compression_opts=9)
+        f.create_dataset("test_set_labels", data=test_img_labels, compression="gzip", compression_opts=9)
 
 def load_fashionnet_dataset():
     with h5py.File("datasets/train_fashionnet.h5", "r") as f:
