@@ -42,3 +42,5 @@ The notebooks are organized based on frameworks:
 * [Building ResNet50 in Keras](computer-vision/CV%20-%20Residual%20Network%20Keras.ipynb)
 
 * [A multi-outputs example in Keras](computer-vision/CV%20-%20Multi-outputs%20example.ipynb)
+
+* [CNN with Fashion-MNIST dataset in Keras](computer-vision/fashionnet_mnist/CV%20-%20Fashion%MNIST%CNN.ipynb)
