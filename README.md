@@ -43,4 +43,6 @@ The notebooks are organized based on frameworks:
 
 * [A multi-outputs example in Keras](computer-vision/CV%20-%20Multi-outputs%20example.ipynb)
 
-* [CNN with Fashion-MNIST dataset in Keras](computer-vision/fashionnet_mnist/CV%20-%20Fashion%MNIST%CNN.ipynb)
+* [CNN with Fashion-MNIST dataset in Keras](computer-vision/fashionnet_mnist/CV%20-%20Fashion%20MNIST%20CNN.ipynb)
+
+* [CNN with CIFAR-10 dataset in Keras](computer-vision/cifar/CV%20-%20CIFAR%2010.ipynb)
