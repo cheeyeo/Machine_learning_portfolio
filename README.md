@@ -46,3 +46,15 @@ The notebooks are organized based on frameworks:
 * [CNN with Fashion-MNIST dataset in Keras](computer-vision/fashionnet_mnist/CV%20-%20Fashion%20MNIST%20CNN.ipynb)
 
 * [CNN with CIFAR-10 dataset in Keras](computer-vision/cifar/CV%20-%20CIFAR%2010.ipynb)
+
+## NLP (Natural Language Processing)
+
+* [Simple example of developing Word2Vec embedding using gensim](recurrent-neural-networks/word-embeddings/develop-word-vec.py)
+
+* [Loading GloVe embedding with gensim](recurrent-neural-networks/word-embeddings/glove-word2vec.py)
+
+* [Visualizing Word2Vec embedding](recurrent-neural-networks/word-embeddings/visualize-word2vec.py)
+
+* [Simple example of developing embedding using Embedding layer in Keras](recurrent-neural-networks/word-embeddings/embedding-example.py)
+
+* [Example of loading GloVe embedding using Embedding layer in Keras](recurrent-neural-networks/word-embeddings/pretrained-word-embeddings.py)
