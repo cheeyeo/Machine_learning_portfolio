@@ -3,3 +3,4 @@ __pycache__
 .ipynb_checkpoints
 portfolio/
 .DS_Store
+recurrent-neural-networks/word-embeddings/data/
