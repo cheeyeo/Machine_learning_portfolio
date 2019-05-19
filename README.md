@@ -5,7 +5,7 @@ learning and deep learning.
 
 Most of the examples are based on books and other online tutorials.
 
-The notebooks are organized based on frameworks:
+The notebooks are organized based on frameworks and subject areas:
 
 ## Keras
 
@@ -58,3 +58,11 @@ The notebooks are organized based on frameworks:
 * [Simple example of developing embedding using Embedding layer in Keras](recurrent-neural-networks/word-embeddings/embedding-example.py)
 
 * [Example of loading GloVe embedding using Embedding layer in Keras](recurrent-neural-networks/word-embeddings/pretrained-word-embeddings.py)
+
+* [Example of Debiasing word embeddings](recurrent-neural-networks/word-embeddings/wordvector-debiasing.py)
+
+* [Example of word vector operations](recurrent-neural-networks/word-embeddings/wordvector-operations.py)
+
+* [Document classification using CNN + Embedding](recurrent-neural-networks/cnn-embedding-example)
+
+* [Document classification using Multiple CNN + Embedding](recurrent-neural-networks/ngram-cnn-embedding)
