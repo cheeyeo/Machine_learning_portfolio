@@ -63,6 +63,6 @@ The notebooks are organized based on frameworks and subject areas:
 
 * [Example of word vector operations](recurrent-neural-networks/word-embeddings/wordvector-operations.py)
 
-* [Document classification using CNN + Embedding](recurrent-neural-networks/cnn-embedding-example)
+* [Document classification using CNN + Embedding](recurrent-neural-networks/text-classification/cnn-embedding-example)
 
-* [Document classification using Multiple CNN + Embedding](recurrent-neural-networks/ngram-cnn-embedding)
+* [Document classification using Multiple CNN + Embedding](recurrent-neural-networks/text-classification/ngram-cnn-embedding)
