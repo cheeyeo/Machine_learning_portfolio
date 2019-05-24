@@ -70,3 +70,5 @@ The notebooks are organized based on frameworks and subject areas:
 * [Character-level neural language model generator](recurrent-neural-networks/neural-language-models/character-language-model-generator)
 
 * [Character-level neural language model](recurrent-neural-networks/neural-language-models/character-language-model)
+
+* [Word-level neural language model](recurrent-neural-networks/neural-language-models/word-language-model)
