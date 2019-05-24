@@ -72,3 +72,5 @@ The notebooks are organized based on frameworks and subject areas:
 * [Character-level neural language model](recurrent-neural-networks/neural-language-models/character-language-model)
 
 * [Word-level neural language model](recurrent-neural-networks/neural-language-models/word-language-model)
+
+* [Simple neural machine translation NMT example](recurrent-neural-networks/neural-machine-translation)
