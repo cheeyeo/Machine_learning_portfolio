@@ -68,3 +68,5 @@ The notebooks are organized based on frameworks and subject areas:
 * [Document classification using Multiple CNN + Embedding](recurrent-neural-networks/text-classification/ngram-cnn-embedding)
 
 * [Character-level neural language model generator](recurrent-neural-networks/neural-language-models/character-language-model-generator)
+
+* [Character-level neural language model](recurrent-neural-networks/neural-language-models/character-language-model)
