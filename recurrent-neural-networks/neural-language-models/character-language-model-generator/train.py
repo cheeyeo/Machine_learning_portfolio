@@ -13,7 +13,7 @@ def on_epoch_end(epoch, _):
       sampled_indices = sample(model, char_to_ix, seq_length=27, n_chars=50)
       print_sample(sampled_indices, ix_to_char)
 
-data = load_doc("data/dinos.txt")
+data = load_doc("./data/dinos.txt")
 data = data.lower()
 chars = sorted(list(set(data)))
 
@@ -67,13 +67,13 @@ model = define_model_v2(seq_length, vocab_size)
 print('[INFO] Training model...')
 print_callback = LambdaCallback(on_epoch_end=on_epoch_end)
 model.fit(Xtrain, Ytrain,
-          epochs=2000,
+          epochs=200,
           batch_size=64,
           callbacks=[print_callback],
           verbose=1)
 
 print('[INFO] Saving model...')
-model.save('modelv2.h5')
+model.save('model-final.h5')
 
 print('[INFO] Saving dictionaries...')
 dump(char_to_ix, open('char_to_ix.pkl', 'wb'))

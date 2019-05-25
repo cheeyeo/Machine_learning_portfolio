@@ -4,7 +4,7 @@ import numpy as np
 from utils import sample, print_sample
 
 # load the model
-model = load_model('modelv2.h5')
+model = load_model('model-final.h5')
 # model.summary()
 # load the mapping
 char_to_ix = load(open('char_to_ix.pkl', 'rb'))
